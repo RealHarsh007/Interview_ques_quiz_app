@@ -1,0 +1,243 @@
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================================================
+   GLOBAL STYLING
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#dbeafe,#eff6ff,#f8fafc);
+    padding:20px;
+    color:#1e293b;
+}
+
+/* =========================================================
+   COMMON BOX DESIGN
+========================================================= */
+
+.box,
+.container{
+    width:100%;
+    max-width:700px;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    border:2px solid #dbeafe;
+    box-shadow:0 10px 30px rgba(37,99,235,0.08);
+}
+
+/* =========================================================
+   ================= INDEX.HTML ============================
+========================================================= */
+
+/* =========================================================
+   LOGO SECTION
+========================================================= */
+
+.logo{
+    width:120px;
+    height:120px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    background:#f1f5f9;
+    border:5px solid #bfdbfe;
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.title{
+    text-align:center;
+    margin-top:25px;
+    font-size:2.5rem;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.title span{
+    color:#2563eb;
+}
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.subtitle{
+    text-align:center;
+    margin-top:15px;
+    line-height:1.8;
+    color:#64748b;
+    font-size:1rem;
+}
+
+/* =========================================================
+   BUTTON DESIGN
+========================================================= */
+
+.start-btn,
+.submit-btn{
+    display:block;
+    margin:35px auto 0;
+    padding:14px 35px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(37,99,235,0.2);
+}
+
+.start-btn:hover,
+.submit-btn:hover{
+    background:linear-gradient(90deg,#1d4ed8,#2563eb);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+    margin-top:35px;
+    text-align:center;
+    color:#64748b;
+    font-size:0.95rem;
+}
+
+.footer span{
+    color:#2563eb;
+    font-weight:600;
+}
+
+/* =========================================================
+   ================= QUIZ_QUES.HTML ========================
+========================================================= */
+
+/* =========================================================
+   PROGRESS & TIMER
+========================================================= */
+
+.progress,
+.timer{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+.progress{
+    color:#2563eb;
+}
+
+.timer{
+    color:#dc2626;
+}
+
+/* =========================================================
+   QUESTION SECTION
+========================================================= */
+
+.question{
+    font-size:1.5rem;
+    font-weight:600;
+    margin-bottom:30px;
+    color:#0f172a;
+    line-height:1.6;
+}
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.options{
+    list-style:none;
+}
+
+.options li{
+    margin-bottom:15px;
+    border-radius:12px;
+    border:2px solid #dbeafe;
+    background:#f8fafc;
+    transition:0.2s;
+    cursor:pointer;
+}
+
+.options li:hover{
+    background:#eff6ff;
+    border-color:#60a5fa;
+}
+
+/* =========================================================
+   OPTION BOX
+========================================================= */
+
+.option-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    padding:15px;
+    cursor:pointer;
+}
+
+.option-text{
+    width:100%;
+    font-size:1rem;
+    font-weight:500;
+}
+
+/* =========================================================
+   RESULT SECTION
+========================================================= */
+
+.result{
+    margin-top:30px;
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:700;
+    color:#2563eb;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media(max-width:768px){
+
+    .box,
+    .container{
+        padding:25px;
+    }
+
+    .title{
+        font-size:2rem;
+    }
+
+    .question{
+        font-size:1.3rem;
+    }
+}

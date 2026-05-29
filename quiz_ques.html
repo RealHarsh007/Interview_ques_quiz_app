@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- PROGRESS -->
+
+        <div class="progress" id="progress">
+            Question 1 of 3
+        </div>
+
+        <!-- TIMER -->
+
+        <div class="timer" id="timer">
+            Time Left : 25s
+        </div>
+
+        <!-- QUIZ -->
+
+        <div id="quiz">
+
+            <!-- QUESTION -->
+
+            <div class="question">
+                Question Here
+            </div>
+
+            <!-- OPTIONS -->
+
+            <ul class="options">
+
+                <li>
+                    <label class="option-box">
+                        <input type="radio" name="option" value="0">
+                        <span class="option-text">Option 1</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="option-box">
+                        <input type="radio" name="option" value="1">
+                        <span class="option-text">Option 2</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="option-box">
+                        <input type="radio" name="option" value="2">
+                        <span class="option-text">Option 3</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="option-box">
+                        <input type="radio" name="option" value="3">
+                        <span class="option-text">Option 4</span>
+                    </label>
+                </li>
+
+            </ul>
+
+            <!-- SUBMIT BUTTON -->
+
+            <button class="submit-btn" onclick="submitAnswer()">
+                Submit Answer
+            </button>
+
+        </div>
+
+        <!-- RESULT -->
+
+        <div class="result" id="result"></div>
+
+    </div>
+
+    <script>
+
+        /* =====================================================
+           QUESTIONS
+        ====================================================== */
+
+        const questions = [
+
+            {
+                question: "Which language is used for web development?",
+                options: ["Python", "HTML", "C++", "Java"],
+                answer: 1
+            },
+
+            {
+                question: "Which is a JavaScript framework?",
+                options: ["React", "Django", "Flask", "Java"],
+                answer: 0
+            },
+
+            {
+                question: "Which tag is used for images in HTML?",
+                options: ["img", "image", "src", "pic"],
+                answer: 0
+            }
+
+        ];
+
+        /* =====================================================
+           VARIABLES
+        ====================================================== */
+
+        let currentQuestion = 0;
+        let score = 0;
+        let timer;
+        let timeLeft = 25;
+
+        /* =====================================================
+           LOAD QUESTION
+        ====================================================== */
+
+        function loadQuestion(){
+
+            clearInterval(timer);
+
+            const q = questions[currentQuestion];
+
+            /* QUESTION */
+
+            document.querySelector(".question").textContent =
+                q.question;
+
+            /* OPTIONS */
+
+            const optionTexts =
+                document.querySelectorAll(".option-text");
+
+            const optionInputs =
+                document.querySelectorAll(
+                    "input[name='option']"
+                );
+
+            optionTexts.forEach((text,index)=>{
+
+                text.textContent = q.options[index];
+
+                optionInputs[index].checked = false;
+
+                optionInputs[index].value = index;
+
+            });
+
+            /* PROGRESS */
+
+            document.getElementById("progress").textContent =
+                `Question ${currentQuestion + 1} of ${questions.length}`;
+
+            startTimer();
+
+        }
+
+        /* =====================================================
+           TIMER
+        ====================================================== */
+
+        function startTimer(){
+
+            timeLeft = 25;
+
+            const timerElement =
+                document.getElementById("timer");
+
+            timerElement.textContent =
+                `Time Left : ${timeLeft}s`;
+
+            timer = setInterval(()=>{
+
+                timeLeft--;
+
+                timerElement.textContent =
+                    `Time Left : ${timeLeft}s`;
+
+                if(timeLeft <= 0){
+
+                    clearInterval(timer);
+
+                    nextQuestion();
+
+                }
+
+            },1000);
+
+        }
+
+        /* =====================================================
+           SUBMIT ANSWER
+        ====================================================== */
+
+        function submitAnswer(){
+
+            const selectedOption =
+                document.querySelector(
+                    "input[name='option']:checked"
+                );
+
+            if(!selectedOption){
+
+                alert("Please select an option!");
+
+                return;
+            }
+
+            const selectedAnswer =
+                Number(selectedOption.value);
+
+            if(selectedAnswer === questions[currentQuestion].answer){
+
+                score++;
+
+            }
+
+            nextQuestion();
+
+        }
+
+        /* =====================================================
+           NEXT QUESTION
+        ====================================================== */
+
+        function nextQuestion(){
+
+            clearInterval(timer);
+
+            currentQuestion++;
+
+            if(currentQuestion < questions.length){
+
+                loadQuestion();
+
+            }
+            else{
+
+                showResult();
+
+            }
+
+        }
+
+        /* =====================================================
+           SHOW RESULT
+        ====================================================== */
+
+        function showResult(){
+
+            document.getElementById("quiz").style.display = "none";
+
+            document.getElementById("timer").style.display = "none";
+
+            document.getElementById("progress").style.display = "none";
+
+            document.getElementById("result").innerHTML =
+            `
+                🎉 Quiz Completed <br><br>
+                Your Score : ${score} / ${questions.length}
+            `;
+
+        }
+
+        /* =====================================================
+           START QUIZ
+        ====================================================== */
+
+        loadQuestion();
+
+    </script>
+
+</body>
+
+</html>
