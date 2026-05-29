@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Questions</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/Style.css">
 </head>
 
 <body>
@@ -92,190 +92,420 @@
         const questions = [
 
             {
-                question: "Which language is used for web development?",
-                options: ["Python", "HTML", "C++", "Java"],
-                answer: 1
-            },
-
-            {
-                question: "Which is a JavaScript framework?",
-                options: ["React", "Django", "Flask", "Java"],
-                answer: 0
-            },
-
-            {
-                question: "Which tag is used for images in HTML?",
-                options: ["img", "image", "src", "pic"],
-                answer: 0
-            }
+    question: "What does CSS stand for?",
+    options: ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+    answer: 1
+},
+{
+    question: "Which HTML tag is used for hyperlinks?",
+    options: ["link", "a", "href", "url"],
+    answer: 1
+},
+{
+    question: "Which company developed JavaScript?",
+    options: ["Microsoft", "Google", "Netscape", "Oracle"],
+    answer: 2
+},
+{
+    question: "Which symbol is used for comments in JavaScript?",
+    options: ["//", "#", "<!--", "**"],
+    answer: 0
+},
+{
+    question: "Which HTML tag creates a line break?",
+    options: ["break", "lb", "br", "hr"],
+    answer: 2
+},
+{
+    question: "Which property changes text color in CSS?",
+    options: ["font-color", "text-color", "color", "background"],
+    answer: 2
+},
+{
+    question: "Which method prints data to the browser console?",
+    options: ["console.log()", "print()", "echo()", "write()"],
+    answer: 0
+},
+{
+    question: "Which HTML element is used for the largest heading?",
+    options: ["h6", "head", "h1", "heading"],
+    answer: 2
+},
+{
+    question: "Which CSS property controls text size?",
+    options: ["font-style", "font-size", "text-size", "size"],
+    answer: 1
+},
+{
+    question: "How do you declare a JavaScript variable?",
+    options: ["var", "let", "const", "All of these"],
+    answer: 3
+},
+{
+    question: "Which HTML tag creates an unordered list?",
+    options: ["ol", "ul", "li", "list"],
+    answer: 1
+},
+{
+    question: "Which operator checks equality and type in JavaScript?",
+    options: ["==", "=", "===", "!="],
+    answer: 2
+},
+{
+    question: "Which CSS property adds space inside an element?",
+    options: ["margin", "padding", "border", "spacing"],
+    answer: 1
+},
+{
+    question: "What does API stand for?",
+    options: ["Application Programming Interface", "Application Process Interface", "Advanced Programming Interface", "Application Program Internet"],
+    answer: 0
+},
+{
+    question: "Which keyword creates a constant in JavaScript?",
+    options: ["let", "var", "const", "static"],
+    answer: 2
+},
+{
+    question: "Which HTML tag is used for tables?",
+    options: ["tb", "table", "tr", "td"],
+    answer: 1
+},
+{
+    question: "Which CSS property changes background color?",
+    options: ["bg-color", "background", "background-color", "color"],
+    answer: 2
+},
+{
+    question: "What is the default position value in CSS?",
+    options: ["absolute", "fixed", "relative", "static"],
+    answer: 3
+},
+{
+    question: "Which function converts JSON text into an object?",
+    options: ["JSON.parse()", "JSON.stringify()", "parseJSON()", "toObject()"],
+    answer: 0
+},
+{
+    question: "Which HTML tag is used for forms?",
+    options: ["input", "form", "fieldset", "submit"],
+    answer: 1
+},
+{
+    question: "Which CSS property makes text bold?",
+    options: ["font-weight", "font-style", "text-bold", "weight"],
+    answer: 0
+},
+{
+    question: "Which array method adds an element at the end?",
+    options: ["push()", "pop()", "shift()", "concat()"],
+    answer: 0
+},
+{
+    question: "Which HTML tag is used to create a button?",
+    options: ["btn", "button", "click", "input"],
+    answer: 1
+},
+{
+    question: "What does DOM stand for?",
+    options: ["Document Object Model", "Data Object Model", "Document Oriented Model", "Desktop Object Model"],
+    answer: 0
+},
+{
+    question: "Which CSS property creates rounded corners?",
+    options: ["radius", "border-radius", "corner-radius", "curve"],
+    answer: 1
+},
+{
+    question: "Which method removes the last element from an array?",
+    options: ["shift()", "remove()", "pop()", "splice()"],
+    answer: 2
+},
+{
+    question: "Which HTML tag is used for paragraphs?",
+    options: ["para", "p", "text", "paragraph"],
+    answer: 1
+},
+{
+    question: "Which JavaScript keyword defines a function?",
+    options: ["func", "define", "function", "method"],
+    answer: 2
+},
+{
+    question: "Which CSS property aligns text?",
+    options: ["align", "text-align", "font-align", "position"],
+    answer: 1
+},
+{
+    question: "Which operator is used for logical AND?",
+    options: ["&", "&&", "||", "!"],
+    answer: 1
+},
+{
+    question: "Which HTML tag is used for inserting videos?",
+    options: ["media", "movie", "video", "vid"],
+    answer: 2
+},
+{
+    question: "What is React?",
+    options: ["Database", "Framework", "Library", "Language"],
+    answer: 2
+},
+{
+    question: "Which hook is used for state management in React?",
+    options: ["useFetch", "useState", "useData", "useApi"],
+    answer: 1
+},
+{
+    question: "Which command creates a React app?",
+    options: ["npm start", "create-react-app", "react-app", "npm react"],
+    answer: 1
+},
+{
+    question: "Which company maintains React?",
+    options: ["Google", "Facebook", "Microsoft", "Amazon"],
+    answer: 1
+},
+{
+    question: "Which Git command uploads changes?",
+    options: ["git pull", "git push", "git fetch", "git merge"],
+    answer: 1
+},
+{
+    question: "Which Git command downloads changes?",
+    options: ["git push", "git pull", "git commit", "git add"],
+    answer: 1
+},
+{
+    question: "Which Git command stages files?",
+    options: ["git commit", "git push", "git add", "git init"],
+    answer: 2
+},
+{
+    question: "Which SQL statement retrieves data?",
+    options: ["GET", "SELECT", "SHOW", "FETCH"],
+    answer: 1
+},
+{
+    question: "Which SQL command inserts data?",
+    options: ["INSERT", "ADD", "UPDATE", "CREATE"],
+    answer: 0
+},
+{
+    question: "Which HTTP method creates data?",
+    options: ["GET", "POST", "DELETE", "PUT"],
+    answer: 1
+},
+{
+    question: "Which HTTP method updates data?",
+    options: ["GET", "POST", "PUT", "HEAD"],
+    answer: 2
+},
+{
+    question: "What does URL stand for?",
+    options: ["Uniform Resource Locator", "Universal Resource Locator", "Uniform Resource Link", "Universal Resource Link"],
+    answer: 0
+},
+{
+    question: "Which HTML tag is used for navigation?",
+    options: ["nav", "menu", "navigate", "header"],
+    answer: 0
+},
+{
+    question: "Which CSS layout module is one-dimensional?",
+    options: ["Grid", "Flexbox", "Table", "Float"],
+    answer: 1
+},
+{
+    question: "Which CSS layout module is two-dimensional?",
+    options: ["Flexbox", "Float", "Grid", "Block"],
+    answer: 2
+},
+{
+    question: "Which JavaScript method converts an object to JSON?",
+    options: ["JSON.parse()", "JSON.stringify()", "toJSON()", "convertJSON()"],
+    answer: 1
+},
+{
+    question: "Which React hook handles side effects?",
+    options: ["useState", "useMemo", "useEffect", "useRef"],
+    answer: 2
+},
+{
+    question: "Which HTML tag is used for audio?",
+    options: ["sound", "music", "audio", "media"],
+    answer: 2
+},
+{
+    question: "Which keyword stops a loop?",
+    options: ["stop", "exit", "break", "return"],
+    answer: 2
+}
 
         ];
+/* =====================================================
+   VARIABLES
+===================================================== */
 
-        /* =====================================================
-           VARIABLES
-        ====================================================== */
+let currentQuestion = 0;
+let score = 0;
+let timer;
+let timeLeft = 25;
 
-        let currentQuestion = 0;
-        let score = 0;
-        let timer;
-        let timeLeft = 25;
+/* =====================================================
+   LOAD QUESTION
+===================================================== */
 
-        /* =====================================================
-           LOAD QUESTION
-        ====================================================== */
+function loadQuestion() {
 
-        function loadQuestion(){
+    clearInterval(timer);
+
+    const q = quizQuestions[currentQuestion];
+
+    document.querySelector(".question").textContent =
+        q.question;
+
+    const optionTexts =
+        document.querySelectorAll(".option-text");
+
+    const optionInputs =
+        document.querySelectorAll("input[name='option']");
+
+    optionTexts.forEach((text, index) => {
+
+        text.textContent = q.options[index];
+
+        optionInputs[index].checked = false;
+
+        optionInputs[index].value = index;
+
+    });
+
+    document.getElementById("progress").textContent =
+        `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+
+    startTimer();
+}
+
+/* =====================================================
+   TIMER
+===================================================== */
+
+function startTimer() {
+
+    timeLeft = 25;
+
+    const timerElement =
+        document.getElementById("timer");
+
+    timerElement.textContent =
+        `Time Left : ${timeLeft}s`;
+
+    timer = setInterval(() => {
+
+        timeLeft--;
+
+        timerElement.textContent =
+            `Time Left : ${timeLeft}s`;
+
+        if (timeLeft <= 0) {
 
             clearInterval(timer);
-
-            const q = questions[currentQuestion];
-
-            /* QUESTION */
-
-            document.querySelector(".question").textContent =
-                q.question;
-
-            /* OPTIONS */
-
-            const optionTexts =
-                document.querySelectorAll(".option-text");
-
-            const optionInputs =
-                document.querySelectorAll(
-                    "input[name='option']"
-                );
-
-            optionTexts.forEach((text,index)=>{
-
-                text.textContent = q.options[index];
-
-                optionInputs[index].checked = false;
-
-                optionInputs[index].value = index;
-
-            });
-
-            /* PROGRESS */
-
-            document.getElementById("progress").textContent =
-                `Question ${currentQuestion + 1} of ${questions.length}`;
-
-            startTimer();
-
-        }
-
-        /* =====================================================
-           TIMER
-        ====================================================== */
-
-        function startTimer(){
-
-            timeLeft = 25;
-
-            const timerElement =
-                document.getElementById("timer");
-
-            timerElement.textContent =
-                `Time Left : ${timeLeft}s`;
-
-            timer = setInterval(()=>{
-
-                timeLeft--;
-
-                timerElement.textContent =
-                    `Time Left : ${timeLeft}s`;
-
-                if(timeLeft <= 0){
-
-                    clearInterval(timer);
-
-                    nextQuestion();
-
-                }
-
-            },1000);
-
-        }
-
-        /* =====================================================
-           SUBMIT ANSWER
-        ====================================================== */
-
-        function submitAnswer(){
-
-            const selectedOption =
-                document.querySelector(
-                    "input[name='option']:checked"
-                );
-
-            if(!selectedOption){
-
-                alert("Please select an option!");
-
-                return;
-            }
-
-            const selectedAnswer =
-                Number(selectedOption.value);
-
-            if(selectedAnswer === questions[currentQuestion].answer){
-
-                score++;
-
-            }
-
             nextQuestion();
 
         }
 
-        /* =====================================================
-           NEXT QUESTION
-        ====================================================== */
+    }, 1000);
+}
 
-        function nextQuestion(){
+/* =====================================================
+   SUBMIT ANSWER
+===================================================== */
 
-            clearInterval(timer);
+function submitAnswer() {
 
-            currentQuestion++;
+    const selectedOption =
+        document.querySelector(
+            "input[name='option']:checked"
+        );
 
-            if(currentQuestion < questions.length){
+    if (!selectedOption) {
 
-                loadQuestion();
+        alert("Please select an option!");
+        return;
 
-            }
-            else{
+    }
 
-                showResult();
+    const selectedAnswer =
+        Number(selectedOption.value);
 
-            }
+    if (
+        selectedAnswer ===
+        quizQuestions[currentQuestion].answer
+    ) {
 
-        }
+        score++;
 
-        /* =====================================================
-           SHOW RESULT
-        ====================================================== */
+    }
 
-        function showResult(){
+    nextQuestion();
+}
 
-            document.getElementById("quiz").style.display = "none";
+/* =====================================================
+   NEXT QUESTION
+===================================================== */
 
-            document.getElementById("timer").style.display = "none";
+function nextQuestion() {
 
-            document.getElementById("progress").style.display = "none";
+    clearInterval(timer);
 
-            document.getElementById("result").innerHTML =
-            `
-                🎉 Quiz Completed <br><br>
-                Your Score : ${score} / ${questions.length}
-            `;
+    currentQuestion++;
 
-        }
-
-        /* =====================================================
-           START QUIZ
-        ====================================================== */
+    if (currentQuestion < quizQuestions.length) {
 
         loadQuestion();
+
+    } else {
+
+        showResult();
+
+    }
+}
+
+/* =====================================================
+   SHOW RESULT
+===================================================== */
+
+function showResult() {
+
+    document.getElementById("quiz").style.display = "none";
+
+    document.getElementById("timer").style.display = "none";
+
+    document.getElementById("progress").style.display = "none";
+
+    const percentage =
+        Math.round(
+            (score / quizQuestions.length) * 100
+        );
+
+    document.getElementById("result").innerHTML = `
+        <h2>🎉 Quiz Completed</h2>
+        <br>
+        <h3>Score: ${score} / ${quizQuestions.length}</h3>
+        <h3>Percentage: ${percentage}%</h3>
+        <br>
+        <button onclick="location.reload()">
+            Restart Quiz
+        </button>
+    `;
+}
+
+/* =====================================================
+   START QUIZ
+===================================================== */
+
+loadQuestion();
 
     </script>
 
